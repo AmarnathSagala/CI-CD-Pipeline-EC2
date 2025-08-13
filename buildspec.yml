@@ -16,4 +16,5 @@ artifacts:
     - index.html
     - app.js
     - appspec.yml
+    - buildspec.yml
     - scripts/**
