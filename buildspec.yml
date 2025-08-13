@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Install phase - nothing to install for static site"
+  build:
+    commands:
+      - echo "Build phase - packaging artifacts"
+  post_build:
+    commands:
+      - echo "Post-build phase complete"
+
+artifacts:
+  files:
+    - index.html
+    - app.js
+    - appspec.yml
+    - scripts/**
