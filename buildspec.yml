@@ -1,5 +1,4 @@
 version: 0.2
-
 phases:
   install:
     commands:
@@ -10,7 +9,6 @@ phases:
   post_build:
     commands:
       - echo "Post-build phase complete"
-
 artifacts:
   files:
     - '**/*'
