@@ -1,8 +1,6 @@
 #!/bin/bash
 set -e
-
 echo "=== Starting Nginx ==="
-
-systemctl start nginx
-
+sudo systemctl enable nginx
+sudo systemctl start nginx
 echo "=== Nginx started successfully ==="
