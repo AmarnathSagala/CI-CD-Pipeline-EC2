@@ -1,3 +1,28 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "No dependencies to install"
+  build:
+    commands:
+      - echo "Building artifact"
+      - mkdir output
+      - cp index.html app.js install_nginx.sh start_nginx.sh appspec.yml output/
+  post_build:
+    commands:
+      - echo "Build complete"
+artifacts:
+  files:
+    - output/*
+
+
+
+
+
+
+
+
 # version: 0.2
 # phases:
 #   install:
@@ -12,19 +37,19 @@
 # artifacts:
 #   files:
 #     - '**/*'
-version: 0.2
-phases:
-  install:
-    commands:
-      - echo "Installing dependencies (if any)"
-  build:
-    commands:
-      - echo "Building artifact"
-      - mkdir output
-      - cp index.html app.js install_nginx.sh start_nginx.sh appspec.yml output/
-  post_build:
-    commands:
-      - echo "Build completed"
-artifacts:
-  files:
-    - output/*
+# version: 0.2
+# phases:
+#   install:
+#     commands:
+#       - echo "Installing dependencies (if any)"
+#   build:
+#     commands:
+#       - echo "Building artifact"
+#       - mkdir output
+#       - cp index.html app.js install_nginx.sh start_nginx.sh appspec.yml output/
+#   post_build:
+#     commands:
+#       - echo "Build completed"
+# artifacts:
+#   files:
+#     - output/*
