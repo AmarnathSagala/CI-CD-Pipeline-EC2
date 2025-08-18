@@ -1,5 +1,4 @@
 version: 0.2
-
 phases:
   install:
     commands:
@@ -7,11 +6,13 @@ phases:
   build:
     commands:
       - echo "Building artifact"
-      - mkdir output
-      - cp index.html app.js install_nginx.sh start_nginx.sh appspec.yml output/
+      - mkdir -p output/scripts
+      - cp index.html app.js output/
+      - cp -r scripts/* output/scripts/
+      - cp appspec.yml output/
   post_build:
     commands:
-      - echo "Build complete"
+      - echo "Build completed"
 artifacts:
   files:
     - output/*
