@@ -1,4 +1,4 @@
-# #!/bin/bash
+# #!/bin/bash bashes bashes
 # set -e
 
 # echo "=== Installing Nginx ==="
