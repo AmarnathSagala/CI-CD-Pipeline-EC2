@@ -7,7 +7,8 @@ phases:
     commands:
       - echo "Building artifact"
       - mkdir -p output
-      - mkdir -p output/scripts
+      - ls -la  # Debug: List files to check presence
+      - chmod -R 755 output
       - cp index.html app.js output/
       - cp -r scripts/* output/scripts/
       - cp appspec.yml output/
