@@ -1,0 +1,52 @@
+version: 0.2
+phases:
+  install:
+    commands:
+      - echo "No dependencies to install"
+  build:
+    commands:
+      - echo "Building artifact"
+      - mkdir -p output
+      - ls -la  # Debug: List files to check presence
+      - chmod -R 755 output
+      - cp index.html app.js output/
+      - cp -r scripts/* output/scripts/
+      - cp appspec.yml output/
+  post_build:
+    commands:
+      - echo "Build completed"
+artifacts:
+  files:
+    - output/*
+
+
+# version: 0.2
+# phases:
+#   install:
+#     commands:
+#       - echo "Install phase - nothing to install for static site"
+#   build:
+#     commands:
+#       - echo "Build phase - packaging artifacts"
+#   post_build:
+#     commands:
+#       - echo "Post-build phase complete"
+# artifacts:
+#   files:
+#     - '**/*'
+# version: 0.2
+# phases:
+#   install:
+#     commands:
+#       - echo "Installing dependencies (if any)"
+#   build:
+#     commands:
+#       - echo "Building artifact"
+#       - mkdir output
+#       - cp index.html app.js install_nginx.sh start_nginx.sh appspec.yml output/
+#   post_build:
+#     commands:
+#       - echo "Build completed"
+# artifacts:
+#   files:
+#     - output/*
